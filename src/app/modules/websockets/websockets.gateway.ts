@@ -18,6 +18,8 @@ export class WebsocketGateway
 
   handleConnection(client: Socket) {
     console.log(`Client connected: ${client.id}`);
+    const sockets = Array.from(this.server.sockets.sockets.keys());
+    console.log(sockets);
   }
 
   handleDisconnect(client: Socket) {
